@@ -262,17 +262,15 @@ const Header = () => {
                   <Link href="/mockup7" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Vintage Heritage
                   </Link>
-                        <Link href="/mockup8" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                          Vintage Newspaper
-                        </Link>
-                        <div className="border-t border-gray-600 my-2"></div>
-                        <div className="px-4 py-2 text-gray-400 text-xs uppercase font-semibold">Modern Designs</div>
-                        <Link href="/mockup9" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                          Apple Style Transparency
-                        </Link>
-                        <Link href="/mockup10" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                          Glass Morphism
-                        </Link>
+                  <Link href="/mockup8" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                    Vintage Newspaper
+                  </Link>
+                  <Link href="/mockup9" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                    Apple Style Transparency
+                  </Link>
+                  <Link href="/mockup10" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                    Glass Morphism
+                  </Link>
                         <div className="border-t border-gray-600 my-2"></div>
                         <Link href="/original" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                           Original Website
@@ -336,6 +334,9 @@ const Header = () => {
             {/* Mobile Mockups */}
             <div className="border-t border-summit-secondary my-2"></div>
             <div className="px-3 py-2 text-gray-400 text-xs uppercase font-semibold">Mockups</div>
+            <Link href="/mockup8" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+              Vintage Newspaper
+            </Link>
             <Link href="/mockup9" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               Apple Style Transparency
             </Link>
