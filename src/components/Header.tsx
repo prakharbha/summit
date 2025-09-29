@@ -274,11 +274,6 @@ const Header = () => {
                         Glass Morphism
                       </Link>
                     </div>
-                    <div className="border-t border-gray-600 mt-3 pt-3">
-                      <Link href="/original" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
-                        Original Website
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>
