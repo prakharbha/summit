@@ -237,44 +237,49 @@ const Header = () => {
                   Mockups
                   <ChevronDownIcon className="h-4 w-4 ml-1" />
                 </button>
-                <div className="absolute top-full right-0 mt-2 w-64 bg-summit-secondary rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 max-h-80 overflow-y-auto">
-                  <Link href="/" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Current Design
-                  </Link>
-                  <Link href="/mockup" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Alternative Mockup
-                  </Link>
-                  <Link href="/mockup2" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Modern Minimalist
-                  </Link>
-                  <Link href="/mockup3" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Vintage Industrial
-                  </Link>
-                  <Link href="/mockup4" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Modern Dark Theme
-                  </Link>
-                  <Link href="/mockup5" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Retro Style
-                  </Link>
-                  <Link href="/mockup6" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Split Screen Modern
-                  </Link>
-                  <Link href="/mockup7" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Vintage Heritage
-                  </Link>
-                  <Link href="/mockup8" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Vintage Newspaper
-                  </Link>
-                  <Link href="/mockup9" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Apple Style Transparency
-                  </Link>
-                  <Link href="/mockup10" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                    Glass Morphism
-                  </Link>
-                        <div className="border-t border-gray-600 my-2"></div>
-                        <Link href="/original" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
-                          Original Website
-                        </Link>
+                <div className="absolute top-full right-0 mt-2 w-[28rem] bg-summit-secondary rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="p-4">
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                      <Link href="/" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Current Design
+                      </Link>
+                      <Link href="/mockup" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Alternative Mockup
+                      </Link>
+                      <Link href="/mockup2" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Modern Minimalist
+                      </Link>
+                      <Link href="/mockup3" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Vintage Industrial
+                      </Link>
+                      <Link href="/mockup4" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Modern Dark Theme
+                      </Link>
+                      <Link href="/mockup5" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Retro Style
+                      </Link>
+                      <Link href="/mockup6" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Split Screen Modern
+                      </Link>
+                      <Link href="/mockup7" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Vintage Heritage
+                      </Link>
+                      <Link href="/mockup8" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Vintage Newspaper
+                      </Link>
+                      <Link href="/mockup9" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Apple Style Transparency
+                      </Link>
+                      <Link href="/mockup10" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Glass Morphism
+                      </Link>
+                    </div>
+                    <div className="border-t border-gray-600 mt-3 pt-3">
+                      <Link href="/original" className="block px-3 py-2 text-white hover:bg-summit-accent transition-colors rounded">
+                        Original Website
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
               
