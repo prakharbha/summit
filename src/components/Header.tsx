@@ -259,6 +259,12 @@ const Header = () => {
                   <Link href="/mockup6" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Split Screen Modern
                   </Link>
+                  <Link href="/mockup7" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                    Vintage Heritage
+                  </Link>
+                  <Link href="/mockup8" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                    Vintage Newspaper
+                  </Link>
                   <div className="border-t border-gray-600 my-2"></div>
                   <Link href="/original" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Original Website
