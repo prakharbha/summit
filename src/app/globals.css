@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .summit-btn-primary {
+    @apply bg-summit-red hover:bg-summit-red-dark text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-summit-red hover:border-summit-red-dark;
+  }
+  
+  .summit-btn-secondary {
+    @apply bg-summit-primary hover:bg-summit-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border-2 border-summit-primary hover:border-summit-secondary;
+  }
+  
+  .summit-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .summit-text-gradient {
+    @apply bg-gradient-to-r from-summit-primary to-summit-accent bg-clip-text text-transparent;
+  }
+  
+  .retro-border {
+    @apply border-4 border-summit-red rounded-lg;
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .retro-gradient {
+    @apply bg-gradient-to-br from-summit-primary via-summit-red to-summit-red-dark;
+  }
+  
+  .subtle-gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 85%, rgba(0,0,0,0.2) 100%);
+  }
+  
+  .section-gradient {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, rgba(0,0,0,0.05) 100%);
+  }
+  
+  .card-gradient {
+    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%);
+  }
+}
