@@ -19,7 +19,7 @@ const Mockup8Hero = () => {
               fontFamily: 'serif',
               textShadow: '2px 2px 0px rgba(0,0,0,0.1)'
             }}>
-              THE SUMMIT HERALD
+              THE SUMMIT DRILLING
             </h1>
             
             <div className="text-lg text-gray-700 font-semibold tracking-wider">
