@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Mockup10Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -105,8 +104,7 @@ const Mockup10Hero = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
-                  <Link
-                    href="/resources/start-a-project"
+                  <button
                     className="group backdrop-blur-xl bg-gradient-to-r from-summit-red/90 to-summit-red-dark/90 text-white rounded-2xl px-12 py-5 border border-white/30 hover:shadow-2xl hover:shadow-summit-red/30 transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="flex items-center space-x-3">
@@ -115,10 +113,9 @@ const Mockup10Hero = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </div>
-                  </Link>
+                  </button>
                   
-                  <Link
-                    href="/services"
+                  <button
                     className="group backdrop-blur-xl bg-white/50 text-gray-700 rounded-2xl px-12 py-5 border border-white/40 hover:bg-white/70 transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="flex items-center space-x-3">
@@ -127,7 +124,7 @@ const Mockup10Hero = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </div>
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Since Badge */}

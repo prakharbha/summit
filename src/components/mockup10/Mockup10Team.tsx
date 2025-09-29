@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 const Mockup10Team = () => {
   const [currentMember, setCurrentMember] = useState(0);
@@ -196,12 +195,11 @@ const Mockup10Team = () => {
               <h4 className="text-xl font-light text-gray-900 mb-4">
                 Connect with Our Leadership
               </h4>
-              <Link
-                href="/contact"
+              <button
                 className="inline-flex items-center backdrop-blur-xl bg-gradient-to-r from-summit-red/90 to-summit-red-dark/90 text-white rounded-2xl px-8 py-4 border border-white/30 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Contact Team
-              </Link>
+              </button>
             </div>
           </div>
         </div>

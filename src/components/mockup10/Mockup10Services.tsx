@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 const Mockup10Services = () => {
   const services = [
@@ -75,15 +74,14 @@ const Mockup10Services = () => {
 
                   {/* CTA */}
                   <div className="pt-4">
-                    <Link
-                      href={`/services/${service.title.toLowerCase().replace(' ', '-')}`}
+                    <button
                       className="inline-flex items-center text-summit-red hover:text-summit-red-dark font-medium transition-colors duration-300"
                     >
                       <span>Learn More</span>
                       <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -102,19 +100,17 @@ const Mockup10Services = () => {
             </h3>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/resources/start-a-project"
+              <button
                 className="backdrop-blur-xl bg-gradient-to-r from-summit-red/90 to-summit-red-dark/90 text-white rounded-2xl px-8 py-4 border border-white/30 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Project
-              </Link>
+              </button>
               
-              <Link
-                href="/contact"
+              <button
                 className="backdrop-blur-xl bg-white/50 text-gray-700 rounded-2xl px-8 py-4 border border-white/40 hover:bg-white/70 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
-              </Link>
+              </button>
             </div>
           </div>
         </div>

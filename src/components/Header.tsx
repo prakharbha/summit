@@ -164,15 +164,15 @@ const Header = () => {
                   <ChevronDownIcon className="h-4 w-4 ml-1" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-48 bg-summit-secondary rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link href="/safety/experience-safety" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Experience Safety
-                  </Link>
-                  <Link href="/safety/health-safety-programs" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  </a>
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     H&S Programs
-                  </Link>
-                  <Link href="/safety/safety-meetings" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  </a>
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Safety Meetings
-                  </Link>
+                  </a>
                 </div>
               </div>
               
@@ -182,15 +182,15 @@ const Header = () => {
                   <ChevronDownIcon className="h-4 w-4 ml-1" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-48 bg-summit-secondary rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link href="/about/company-news" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Company News
-                  </Link>
-                  <Link href="/about/company-history" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  </a>
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Company History
-                  </Link>
-                  <Link href="/about/customer-list" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  </a>
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Customer List
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -219,18 +219,18 @@ const Header = () => {
                   <ChevronDownIcon className="h-4 w-4 ml-1" />
                 </button>
                 <div className="absolute top-full right-0 mt-2 w-48 bg-summit-secondary rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link href="/resources/start-a-project" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Start a Project
-                  </Link>
-                  <Link href="/resources/project-mark-out" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
+                  </a>
+                  <a href="#" className="block px-4 py-2 text-white hover:bg-summit-accent transition-colors">
                     Project Mark Out Form
-                  </Link>
+                  </a>
                 </div>
               </div>
               
-              <Link href="/careers" className="text-white hover:text-summit-red transition-colors duration-200 font-semibold">
+              <a href="#" className="text-white hover:text-summit-red transition-colors duration-200 font-semibold">
                 Careers
-              </Link>
+              </a>
               
               <div className="relative group">
                 <button className="text-white hover:text-summit-red transition-colors duration-200 font-semibold flex items-center">
@@ -278,9 +278,9 @@ const Header = () => {
                 </div>
               </div>
               
-              <Link href="/contact" className="bg-summit-red hover:bg-summit-red-dark text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a href="#" className="bg-summit-red hover:bg-summit-red-dark text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Contact
-              </Link>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -315,21 +315,21 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-summit-primary border-t border-summit-secondary">
           <div className="px-4 py-2 space-y-1">
-            <Link href="/services" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+            <a href="#" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               Services
-            </Link>
-            <Link href="/safety" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+            </a>
+            <a href="#" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               Safety
-            </Link>
-            <Link href="/about" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+            </a>
+            <a href="#" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               About Us
-            </Link>
-            <Link href="/resources" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+            </a>
+            <a href="#" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               Resources
-            </Link>
-            <Link href="/careers" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
+            </a>
+            <a href="#" className="block px-3 py-2 text-white hover:bg-summit-secondary rounded-md transition-colors">
               Careers
-            </Link>
+            </a>
             
             {/* Mobile Mockups */}
             <div className="border-t border-summit-secondary my-2"></div>
@@ -344,9 +344,9 @@ const Header = () => {
               Glass Morphism
             </Link>
             
-            <Link href="/contact" className="block px-3 py-2 bg-summit-red hover:bg-summit-red-dark text-white rounded-md transition-colors font-semibold">
+            <a href="#" className="block px-3 py-2 bg-summit-red hover:bg-summit-red-dark text-white rounded-md transition-colors font-semibold">
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       )}
