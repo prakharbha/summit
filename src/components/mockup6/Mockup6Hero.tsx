@@ -6,19 +6,65 @@ import Link from 'next/link';
 
 const Mockup6Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageErrors, setImageErrors] = useState<{[key: number]: boolean}>({});
+  
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Joseph C. Negro",
+      title: "Vice President of Remediation",
+      responsibility: "Leading remediation services expansion",
+      image: "/images/joseph-negro.png"
+    },
+    {
+      id: 2,
+      name: "Dermot P. Dillon", 
+      title: "Vice President, Major Accounts",
+      responsibility: "Managing strategic client relationships",
+      image: "/images/dermot-dillon.png"
+    },
+    {
+      id: 3,
+      name: "Matthew Vetter",
+      title: "Chief Operating Officer", 
+      responsibility: "Overseeing daily operations",
+      image: "/images/matt-vetter.png"
+    },
+    {
+      id: 4,
+      name: "Ron Bucca",
+      title: "Chief Executive Officer",
+      responsibility: "Strategic leadership and vision",
+      image: "/images/ron-bucca.png"
+    },
+    {
+      id: 5,
+      name: "Lauren DiVello",
+      title: "VP Sales & Business Development",
+      responsibility: "Driving growth and partnerships", 
+      image: "/images/lauren-divello.png"
+    },
+    {
+      id: 6,
+      name: "Joel Bernstein",
+      title: "Senior Vice President",
+      responsibility: "Executive leadership and strategy",
+      image: "/images/joel-bernstein.png"
+    }
+  ];
   
   const slides = [
-    { image: "/images/bg-1.jpg", title: "Environmental", subtitle: "Drilling Excellence" },
-    { image: "/images/bg-2.jpg", title: "Geophysical", subtitle: "Investigation" },
-    { image: "/images/bg-3.jpg", title: "Site", subtitle: "Remediation" }
+    { title: "Environmental", subtitle: "Drilling Excellence" },
+    { title: "Geophysical", subtitle: "Investigation" },
+    { title: "Site", subtitle: "Remediation" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % teamMembers.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [teamMembers.length]);
 
   return (
     <section className="relative h-screen overflow-hidden bg-white">
@@ -40,10 +86,10 @@ const Mockup6Hero = () => {
             <div className="space-y-8">
               <h1 className="text-6xl lg:text-7xl font-thin text-gray-900 leading-tight">
                 <span className="block font-light">
-                  {slides[currentSlide].title}
+                  {slides[currentSlide % slides.length].title}
                 </span>
                 <span className="block font-bold text-summit-red">
-                  {slides[currentSlide].subtitle}
+                  {slides[currentSlide % slides.length].subtitle}
                 </span>
               </h1>
               
@@ -87,14 +133,14 @@ const Mockup6Hero = () => {
               </Link>
             </div>
 
-            {/* Slide Indicators */}
-            <div className="flex space-x-3 pt-4">
-              {slides.map((_, index) => (
+            {/* Team Member Indicators */}
+            <div className="flex space-x-2 pt-4">
+              {teamMembers.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-12 h-1 transition-all duration-300 ${
-                    index === currentSlide ? 'bg-summit-red' : 'bg-gray-300'
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-summit-red scale-125' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                 />
               ))}
@@ -102,48 +148,86 @@ const Mockup6Hero = () => {
           </div>
         </div>
 
-        {/* Right Side - Image */}
-        <div className="relative overflow-hidden">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-1000 ${
-                index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-              }`}
-            >
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover"
-                priority={index === 0}
-              />
+        {/* Right Side - Team Member Slider */}
+        <div className="relative overflow-hidden bg-gradient-to-br from-summit-primary to-summit-secondary">
+          <div className="h-full flex items-center justify-center p-8">
+            <div className="relative">
+              <div className="w-80 h-[30rem] lg:w-96 lg:h-[36rem] relative overflow-hidden rounded-2xl shadow-2xl bg-gray-100">
+                {teamMembers.map((member, index) => (
+                  <div
+                    key={member.id}
+                    className={`absolute inset-0 transition-all duration-700 transform ${
+                      index === currentSlide
+                        ? 'opacity-100 scale-100'
+                        : 'opacity-0 scale-105'
+                    }`}
+                  >
+                    {imageErrors[member.id] ? (
+                      <div className="w-full h-full bg-gradient-to-br from-summit-primary to-summit-secondary flex items-center justify-center">
+                        <div className="text-center text-white">
+                          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                          </div>
+                          <p className="text-sm font-semibold">{member.name}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          console.error('Failed to load image:', member.image);
+                          setImageErrors(prev => ({ ...prev, [member.id]: true }));
+                        }}
+                        onLoad={() => {
+                          console.log('Successfully loaded image:', member.image);
+                        }}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                      <p className="text-sm opacity-90 mb-2">{member.title}</p>
+                      <p className="text-sm font-semibold text-summit-red">
+                        {member.responsibility}
+                      </p>
+                      <Link href="https://www.linkedin.com/company/summit-drilling" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block">
+                        <Image src="/images/linkedin-white.png" alt="LinkedIn" width={24} height={24} />
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
               
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/10 to-black/30"></div>
-              
-              {/* Geometric overlay */}
-              <div className="absolute inset-0">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-summit-red/20 transform rotate-45 -translate-y-16 translate-x-16"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-summit-primary/20 transform rotate-45 translate-y-12 -translate-x-12"></div>
+              {/* Team Member Carousel Indicators */}
+              <div className="flex justify-center mt-8 space-x-3">
+                {teamMembers.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide
+                        ? 'bg-summit-red scale-125'
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
-          ))}
+          </div>
 
-          {/* Floating info card */}
-          <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-summit-primary rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-bold text-gray-900">Proven Excellence</div>
-                  <div className="text-sm text-gray-600">Exceptional customer satisfaction</div>
-                </div>
-              </div>
+          {/* Leadership Text Overlay */}
+          <div className="absolute top-8 left-8 right-8">
+            <div className="text-center text-white">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-2">
+                Meet Our <span className="text-summit-red">Leadership</span>
+              </h3>
+              <p className="text-sm opacity-90">
+                Individual responsibility for your experience
+              </p>
             </div>
           </div>
         </div>
